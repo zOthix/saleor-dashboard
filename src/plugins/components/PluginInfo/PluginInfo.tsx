@@ -43,7 +43,7 @@ const PluginInfo: React.FC<PluginInfoProps> = ({ data, description, errors, name
               description: "plugin name",
             })}
           </Text>
-          <Text display="block" fontWeight="bold">
+          <Text display="block" fontWeight="bold" fontSize={4}>
             {name}
           </Text>
         </Box>
@@ -52,12 +52,14 @@ const PluginInfo: React.FC<PluginInfoProps> = ({ data, description, errors, name
             <Text fontSize={3} color="default2">
               <FormattedMessage {...commonMessages.description} />
             </Text>
-            <Text display="block">{description}</Text>
+            <Text display="block" fontSize={4}>
+              {description}
+            </Text>
           </Box>
         )}
         <FormSpacer />
         <Hr />
-        <Text lineHeight={2} fontSize={3} color="default2" display="block" paddingTop={4}>
+        <Text display="block" paddingTop={4}>
           {intl.formatMessage({
             id: "bL/Wrc",
             defaultMessage: "Status",
@@ -66,14 +68,10 @@ const PluginInfo: React.FC<PluginInfoProps> = ({ data, description, errors, name
         </Text>
         <ControlledCheckbox
           name={"active" as keyof PluginDetailsPageFormData}
-          label={
-            <Text>
-              {intl.formatMessage({
-                id: "FA+MRz",
-                defaultMessage: "Set plugin as active",
-              })}
-            </Text>
-          }
+          label={intl.formatMessage({
+            id: "FA+MRz",
+            defaultMessage: "Set plugin as active",
+          })}
           checked={data.active}
           onChange={onChange}
         />

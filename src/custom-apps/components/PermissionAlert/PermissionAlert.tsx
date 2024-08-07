@@ -1,11 +1,10 @@
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { Alert } from "@saleor/macaw-ui";
 import { Box, Chip, Text } from "@saleor/macaw-ui-next";
-import { getIntrospectionQuery } from "graphql";
 import React from "react";
 import { useIntl } from "react-intl";
 
-import { getPermissions } from "./utils";
+import { buildPermissionMap, getPermissions, IntrospectionQuery } from "./utils";
 
 export interface PermissionAlertProps {
   query: string;
@@ -13,16 +12,16 @@ export interface PermissionAlertProps {
 
 const PermissionAlert: React.FC<PermissionAlertProps> = ({ query }) => {
   const intl = useIntl();
-  const introQuery = getIntrospectionQuery();
-  const { data } = useQuery(gql(introQuery), {
+  const { data } = useQuery(IntrospectionQuery, {
     fetchPolicy: "network-only",
   });
-  const permissionInfo = getPermissions(query, data);
-  const hasPermissions = permissionInfo && Object.entries(permissionInfo).length > 0;
+  const elements = data?.__schema?.types || [];
+  const permissionMapping = buildPermissionMap(elements);
+  const permissions = getPermissions(query, permissionMapping);
 
   return (
     <div data-test-id="permission-alert">
-      {hasPermissions && (
+      {permissions.length > 0 && (
         <Alert
           title={intl.formatMessage({
             id: "ngSJ7N",
@@ -33,44 +32,12 @@ const PermissionAlert: React.FC<PermissionAlertProps> = ({ query }) => {
           close={false}
           className="remove-icon-background"
         >
-          <Box display="flex" flexDirection="column" gap={2}>
-            {Object.entries(permissionInfo).map(
-              ([subscription, { isOneOfRequired, permissions }]) => (
-                <Box key={subscription} display="flex" gap={1}>
-                  <Text>
-                    {intl.formatMessage({
-                      id: "0YjGFG",
-                      defaultMessage: "For subscription",
-                      description: "alert message",
-                    })}
-                  </Text>
-                  <Chip color="info1" backgroundColor="info1">
-                    {subscription}
-                  </Chip>
-                  <Text>
-                    {isOneOfRequired
-                      ? intl.formatMessage({
-                          id: "I/y4IU",
-                          defaultMessage: "one of",
-                          description: "alert message",
-                        })
-                      : intl.formatMessage({
-                          defaultMessage: "all of",
-                          id: "C+WD8j",
-                          description: "alert message",
-                        })}
-                  </Text>
-                  {permissions.map(permission => (
-                    <Chip
-                      key={permission}
-                      backgroundColor={isOneOfRequired ? "warning1" : "critical1"}
-                    >
-                      {permission}
-                    </Chip>
-                  ))}
-                </Box>
-              ),
-            )}
+          <Box display="flex" gap={2}>
+            {permissions.map(permission => (
+              <Chip size="small" key={permission}>
+                <Text size={1}>{permission}</Text>
+              </Chip>
+            ))}
           </Box>
         </Alert>
       )}

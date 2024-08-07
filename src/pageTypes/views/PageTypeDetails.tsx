@@ -18,7 +18,6 @@ import {
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
 import useBulkActions from "@dashboard/hooks/useBulkActions";
-import { useListSelectedItems } from "@dashboard/hooks/useListSelectedItems";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
@@ -44,7 +43,6 @@ export const PageTypeDetails: React.FC<PageTypeDetailsProps> = ({ id, params }) 
   const navigate = useNavigator();
   const notify = useNotifier();
   const attributeListActions = useBulkActions();
-  const assignAttributesActions = useListSelectedItems<string>();
   const intl = useIntl();
   const notifySaved = () =>
     notify({
@@ -118,16 +116,13 @@ export const PageTypeDetails: React.FC<PageTypeDetailsProps> = ({ id, params }) 
     return result.data.pageTypeUpdate.errors;
   };
   const handlePageTypeDelete = () => deletePageType({ variables: { id } });
-  const handleAssignAttribute = async () => {
-    await assignAttribute({
+  const handleAssignAttribute = () =>
+    assignAttribute({
       variables: {
         id,
-        ids: assignAttributesActions.selectedItems,
+        ids: params.ids,
       },
     });
-
-    assignAttributesActions.clearSelectedItems();
-  };
   const handleAttributeUnassign = () =>
     unassignAttribute({
       variables: {
@@ -139,7 +134,7 @@ export const PageTypeDetails: React.FC<PageTypeDetailsProps> = ({ id, params }) 
     unassignAttribute({
       variables: {
         id,
-        ids: attributeListActions.listElements,
+        ids: params.ids,
       },
     });
   const handleAttributeReorder = (event: ReorderEvent) =>
@@ -221,6 +216,7 @@ export const PageTypeDetails: React.FC<PageTypeDetailsProps> = ({ id, params }) 
                 navigate(
                   pageTypeUrl(id, {
                     action: "unassign-attributes",
+                    ids: attributeListActions.listElements,
                   }),
                 )
               }
@@ -256,18 +252,26 @@ export const PageTypeDetails: React.FC<PageTypeDetailsProps> = ({ id, params }) 
                 : []
             }
             loading={result.loading}
-            onClose={() => {
-              closeModal();
-              assignAttributesActions.clearSelectedItems();
-            }}
+            onClose={closeModal}
             onSubmit={handleAssignAttribute}
             onFetch={search}
             onFetchMore={loadMore}
             onOpen={result.refetch}
             hasMore={!!result.data?.pageType.availableAttributes.pageInfo.hasNextPage}
             open={params.action === "assign-attribute"}
-            selected={assignAttributesActions.selectedItems}
-            onToggle={assignAttributesActions.toggleSelectItem}
+            selected={params.ids || []}
+            onToggle={attributeId => {
+              const ids = params.ids || [];
+
+              navigate(
+                pageTypeUrl(id, {
+                  ...params,
+                  ids: ids.includes(attributeId)
+                    ? params.ids.filter(selectedId => selectedId !== attributeId)
+                    : [...ids, attributeId],
+                }),
+              );
+            }}
           />
         </>
       )}
@@ -277,7 +281,7 @@ export const PageTypeDetails: React.FC<PageTypeDetailsProps> = ({ id, params }) 
           defaultMessage: "Unassign Attribute from Page Type",
           description: "dialog header",
         })}
-        attributeQuantity={attributeListActions.listElements.length}
+        attributeQuantity={params.ids?.length}
         confirmButtonState={unassignAttributeOpts.status}
         onClose={closeModal}
         onConfirm={handleBulkAttributeUnassign}

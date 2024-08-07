@@ -234,7 +234,7 @@ export const prepareAttributesInput = ({
   return attributes.reduce((attrInput: AttributeValueInput[], attr) => {
     const prevAttrValue = prevAttributesMap.get(attr.id);
 
-    if (isEqual(attr.value, prevAttrValue) && !attr.data.isRequired) {
+    if (isEqual(attr.value, prevAttrValue)) {
       return attrInput;
     }
 
@@ -243,7 +243,7 @@ export const prepareAttributesInput = ({
     if (inputType === AttributeInputTypeEnum.FILE) {
       const fileInput = getFileInput(attr, updatedFileAttributes);
 
-      if (fileInput.file || attr.data.isRequired) {
+      if (fileInput.file) {
         attrInput.push(fileInput);
       }
 
@@ -254,7 +254,7 @@ export const prepareAttributesInput = ({
       const booleanInput = getBooleanInput(attr);
 
       // previous comparison doesn't work because value was string
-      if (isEqual([booleanInput.boolean], prevAttrValue) && !attr.data.isRequired) {
+      if (isEqual([booleanInput.boolean], prevAttrValue)) {
         return attrInput;
       }
 
@@ -314,17 +314,6 @@ export const prepareAttributesInput = ({
         swatch: {
           value: attr.value[0] ?? "",
         },
-      });
-
-      return attrInput;
-    }
-
-    if (inputType === AttributeInputTypeEnum.NUMERIC) {
-      const isEmpty = attr.value[0] === undefined || attr.value[0] === null;
-
-      attrInput.push({
-        id: attr.id,
-        values: isEmpty ? [] : attr.value,
       });
 
       return attrInput;

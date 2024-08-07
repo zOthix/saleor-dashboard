@@ -11,6 +11,7 @@ import React from "react";
 import { useIntl } from "react-intl";
 
 import { PluginDetailsPageFormData } from "../PluginsDetailsPage";
+import { useStyles } from "./styles";
 
 interface PluginSettingsProps {
   data: PluginDetailsPageFormData;
@@ -27,6 +28,7 @@ const PluginSettings: React.FC<PluginSettingsProps> = ({
   onChange,
   fields,
 }) => {
+  const classes = useStyles({});
   const intl = useIntl();
 
   return (
@@ -45,13 +47,7 @@ const PluginSettings: React.FC<PluginSettingsProps> = ({
           const fieldData = fields.find(configField => configField.name === field.name);
 
           return (
-            <Box
-              key={field.name}
-              display="flex"
-              flexDirection="row"
-              alignItems="center"
-              marginBottom={2}
-            >
+            <div className={classes.item} key={field.name}>
               {fieldData.type === ConfigurationTypeFieldEnum.BOOLEAN ? (
                 <>
                   <ControlledSwitch
@@ -97,7 +93,7 @@ const PluginSettings: React.FC<PluginSettingsProps> = ({
                   onChange={onChange}
                 />
               )}
-            </Box>
+            </div>
           );
         })}
       </DashboardCard.Content>

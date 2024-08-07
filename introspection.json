@@ -13,7 +13,7 @@
       {
         "kind": "OBJECT",
         "name": "AccountAddressCreate",
-        "description": "Create a new address for the customer. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
+        "description": "Create a new address for the customer.\n\nRequires one of following set of permissions: AUTHENTICATED_USER or AUTHENTICATED_APP + IMPERSONATE_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
         "fields": [
           {
             "name": "accountErrors",
@@ -1308,6 +1308,12 @@
             "deprecationReason": null
           },
           {
+            "name": "LOGIN_ATTEMPT_DELAYED",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "MISSING_CHANNEL_SLUG",
             "description": null,
             "isDeprecated": false,
@@ -1375,6 +1381,12 @@
           },
           {
             "name": "UNIQUE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNKNOWN_IP_ADDRESS",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -1937,7 +1949,7 @@
       {
         "kind": "OBJECT",
         "name": "AccountUpdate",
-        "description": "Updates the account of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
+        "description": "Updates the account of the logged-in user.\n\nRequires one of following set of permissions: AUTHENTICATED_USER or AUTHENTICATED_APP + IMPERSONATE_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
         "fields": [
           {
             "name": "accountErrors",
@@ -2862,6 +2874,18 @@
               "ofType": null
             },
             "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "skipValidation",
+            "description": "Determine if the address should be validated. By default, Saleor accepts only address inputs matching ruleset from [Google Address Data]{https://chromium-i18n.appspot.com/ssl-address), using [i18naddress](https://github.com/mirumee/google-i18n-address) library. Some mutations may require additional permissions to use the the field. More info about permissions can be found in relevant mutation.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": "false",
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -18364,7 +18388,7 @@
           },
           {
             "name": "totalPrice",
-            "description": "The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
+            "description": "The sum of the checkout line prices, with all the taxes,shipping costs, and discounts included.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -18940,7 +18964,7 @@
       {
         "kind": "OBJECT",
         "name": "CheckoutCreate",
-        "description": "Create a new checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
+        "description": "Create a new checkout.\n\n`skipValidation` field requires HANDLE_CHECKOUTS and AUTHENTICATED_APP permissions.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
         "fields": [
           {
             "name": "checkout",
@@ -19309,7 +19333,7 @@
         "inputFields": [
           {
             "name": "billingAddress",
-            "description": "Billing address of the customer.",
+            "description": "Billing address of the customer. `skipValidation` requires HANDLE_CHECKOUTS and AUTHENTICATED_APP permissions.",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "AddressInput",
@@ -19381,7 +19405,7 @@
           },
           {
             "name": "shippingAddress",
-            "description": "The mailing address to where the checkout will be shipped. Note: the address will be ignored if the checkout doesn't contain shippable items.",
+            "description": "The mailing address to where the checkout will be shipped. Note: the address will be ignored if the checkout doesn't contain shippable items. `skipValidation` requires HANDLE_CHECKOUTS and AUTHENTICATED_APP permissions.",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "AddressInput",
@@ -50767,8 +50791,20 @@
         "fields": [
           {
             "name": "accountAddressCreate",
-            "description": "Create a new address for the customer. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
+            "description": "Create a new address for the customer.\n\nRequires one of following set of permissions: AUTHENTICATED_USER or AUTHENTICATED_APP + IMPERSONATE_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
             "args": [
+              {
+                "name": "customerId",
+                "description": "ID of customer the application is impersonating. The field can be used and is required by apps only. Requires IMPERSONATE_USER and AUTHENTICATED_APP permission.\n\nAdded in Saleor 3.19.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
               {
                 "name": "input",
                 "description": "Fields required to create address.",
@@ -51026,8 +51062,20 @@
           },
           {
             "name": "accountUpdate",
-            "description": "Updates the account of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
+            "description": "Updates the account of the logged-in user.\n\nRequires one of following set of permissions: AUTHENTICATED_USER or AUTHENTICATED_APP + IMPERSONATE_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
             "args": [
+              {
+                "name": "customerId",
+                "description": "ID of customer the application is impersonating. The field can be used and is required by apps only. Requires IMPERSONATE_USER and AUTHENTICATED_APP permission.\n\nAdded in Saleor 3.19.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
               {
                 "name": "input",
                 "description": "Fields required to update the account of the logged-in user.",
@@ -53090,7 +53138,7 @@
           },
           {
             "name": "checkoutCreate",
-            "description": "Create a new checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
+            "description": "Create a new checkout.\n\n`skipValidation` field requires HANDLE_CHECKOUTS and AUTHENTICATED_APP permissions.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
             "args": [
               {
                 "name": "input",
@@ -73987,6 +74035,18 @@
             "deprecationReason": null
           },
           {
+            "name": "isPriceOverridden",
+            "description": "Returns True, if the line unit price was overridden.\n\nAdded in Saleor 3.14.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "isShippingRequired",
             "description": "Whether the product variant requires shipping.",
             "args": [],
@@ -82224,6 +82284,12 @@
           },
           {
             "name": "CHANNEL_INACTIVE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "CHECKOUT_COMPLETION_IN_PROGRESS",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -100652,11 +100718,15 @@
           },
           {
             "name": "type",
-            "description": "Defines the promotion type. Implicate the required promotion rules predicate type and whether the promotion rules will give the catalogue or order discount. \n\nThe default value is `Catalogue`.\n\nThis field will be required from Saleor 3.20.\n\nAdded in Saleor 3.19.",
+            "description": "Defines the promotion type. Implicate the required promotion rules predicate type and whether the promotion rules will give the catalogue or order discount. \n\nAdded in Saleor 3.19.",
             "type": {
-              "kind": "ENUM",
-              "name": "PromotionTypeEnum",
-              "ofType": null
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PromotionTypeEnum",
+                "ofType": null
+              }
             },
             "defaultValue": null,
             "isDeprecated": false,
@@ -105355,7 +105425,7 @@
           },
           {
             "name": "checkout",
-            "description": "Look up a checkout by id.\n\nRequires one of the following permissions to query checkouts that belong to other users: MANAGE_CHECKOUTS, IMPERSONATE_USER. ",
+            "description": "Look up a checkout by id.\n\nRequires one of the following permissions to query a checkout, if a checkout is in inactive channel: MANAGE_CHECKOUTS, IMPERSONATE_USER, HANDLE_PAYMENTS. ",
             "args": [
               {
                 "name": "id",
@@ -105453,7 +105523,7 @@
           },
           {
             "name": "checkouts",
-            "description": "List of checkouts.\n\nRequires one of the following permissions: MANAGE_CHECKOUTS.",
+            "description": "List of checkouts.\n\nRequires one of the following permissions: MANAGE_CHECKOUTS, HANDLE_PAYMENTS.",
             "args": [
               {
                 "name": "after",
@@ -105708,7 +105778,7 @@
           },
           {
             "name": "customers",
-            "description": "List of the shop's customers.\n\nRequires one of the following permissions: MANAGE_ORDERS, MANAGE_USERS.",
+            "description": "List of the shop's customers. This list includes all users who registered through the accountRegister mutation. Additionally, staff users who have placed an order using their account will also appear in this list.\n\nRequires one of the following permissions: MANAGE_ORDERS, MANAGE_USERS.",
             "args": [
               {
                 "name": "after",
@@ -106694,7 +106764,7 @@
             "args": [
               {
                 "name": "externalReference",
-                "description": "External ID of an order. \n\nAdded in Saleor 3.10.",
+                "description": "External ID of an order. \n\nAdded in Saleor 3.10..\n\nRequires one of the following permissions: MANAGE_ORDERS.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -108542,7 +108612,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "ID of an warehouse",
+                "description": "ID of a stock",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -124222,7 +124292,7 @@
           },
           {
             "name": "shippingPrice",
-            "description": "The price of shipping method.",
+            "description": "The price of shipping method, includes shipping voucher discount if applied.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -124380,7 +124450,7 @@
           },
           {
             "name": "totalPrice",
-            "description": "Price of the order line.",
+            "description": "Price of the order line. The price includes catalogue promotions, specific product and applied once per order voucher discounts. The price does not include the entire order discount.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -124396,7 +124466,7 @@
           },
           {
             "name": "unitPrice",
-            "description": "Price of the single item in the order line.",
+            "description": "Price of the single item in the order line. The price includes catalogue promotions, specific product and applied once per order voucher discounts. The price does not include the entire order discount.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -126220,6 +126290,12 @@
         "interfaces": null,
         "enumValues": [
           {
+            "name": "CHECKOUT_COMPLETION_IN_PROGRESS",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "GRAPHQL_ERROR",
             "description": null,
             "isDeprecated": false,
@@ -127286,6 +127362,12 @@
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
+          {
+            "name": "CHECKOUT_COMPLETION_IN_PROGRESS",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "GRAPHQL_ERROR",
             "description": null,
@@ -135056,6 +135138,67 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "stocks",
+            "description": "Stocks that belong to this warehouse.\n\nAdded in Saleor 3.20.\n\nRequires one of the following permissions: MANAGE_PRODUCTS, MANAGE_ORDERS.",
+            "args": [
+              {
+                "name": "after",
+                "description": "Return the elements in the list that come after the specified cursor.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "Return the elements in the list that come before the specified cursor.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "StockCountableConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -136768,7 +136911,7 @@
           },
           {
             "name": "customHeaders",
-            "description": "Custom headers, which will be added to HTTP request. There is a limitation of 5 headers per webhook and 998 characters per header.Only \"X-*\" and \"Authorization*\" keys are allowed.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "description": "Custom headers, which will be added to HTTP request. There is a limitation of 5 headers per webhook and 998 characters per header.Only `X-*`, `Authorization*`, and `BrokerProperties` keys are allowed.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "type": {
               "kind": "SCALAR",
               "name": "JSONString",
@@ -140530,7 +140673,7 @@
           },
           {
             "name": "customHeaders",
-            "description": "Custom headers, which will be added to HTTP request. There is a limitation of 5 headers per webhook and 998 characters per header.Only \"X-*\" and \"Authorization*\" keys are allowed.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "description": "Custom headers, which will be added to HTTP request. There is a limitation of 5 headers per webhook and 998 characters per header.Only `X-*`, `Authorization*`, and `BrokerProperties` keys are allowed.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "type": {
               "kind": "SCALAR",
               "name": "JSONString",

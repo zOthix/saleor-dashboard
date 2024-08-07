@@ -1,8 +1,7 @@
-import { Route } from "@dashboard/components/Router";
 import { asSortParams } from "@dashboard/utils/sort";
 import { parse as parseQs } from "qs";
 import React from "react";
-import { RouteComponentProps, Switch } from "react-router-dom";
+import { Route, RouteComponentProps, Switch } from "react-router-dom";
 
 import { menuListPath, MenuListUrlQueryParams, MenuListUrlSortField, menuPath } from "./urls";
 import MenuDetailsComponent from "./views/MenuDetails";

@@ -1,0 +1,30 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "feat-add-change-language-code-for-store-front",
+    "feat-add-ltr-rtl-for-arabic-language",
+    "feat/add-hebrew-language-in-dashboard",
+    "main",
+    "origin",
+    "revert-1-feat-add-ltr-rtl-for-arabic-language",
+    "revert-2-feat-add-change-language-code-for-store-front"
+  ],
+  "parent": {
+    "feat-add-change-language-code-for-store-front": "main",
+    "feat-add-ltr-rtl-for-arabic-language": "main",
+    "feat/add-hebrew-language-in-dashboard": "main",
+    "main": null,
+    "origin": "main",
+    "revert-1-feat-add-ltr-rtl-for-arabic-language": "main",
+    "revert-2-feat-add-change-language-code-for-store-front": "main"
+  },
+  "order": [
+    "main",
+    "feat-add-change-language-code-for-store-front",
+    "feat-add-ltr-rtl-for-arabic-language",
+    "feat/add-hebrew-language-in-dashboard",
+    "origin",
+    "revert-1-feat-add-ltr-rtl-for-arabic-language",
+    "revert-2-feat-add-change-language-code-for-store-front"
+  ]
+}

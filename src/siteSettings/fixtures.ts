@@ -34,7 +34,7 @@ export const shop: SiteSettingsQuery["shop"] = {
   description: "Lorem ipsum dolor sit amet",
   domain: {
     __typename: "Domain",
-    host: "localhost:8000",
+    host: "http://64.176.164.234:4082",
   },
   name: "Saleor e-commerce",
   reserveStockDurationAnonymousUser: 10,

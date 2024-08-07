@@ -290,12 +290,10 @@ export const OrderNormalDetails: React.FC<OrderNormalDetailsProps> = ({
         open={params.action === "transaction-action"}
         action={params.type}
         onSubmit={() =>
-          orderTransactionAction
-            .mutate({
-              action: params.type,
-              transactionId: params.id,
-            })
-            .finally(() => closeModal())
+          orderTransactionAction.mutate({
+            action: params.type,
+            transactionId: params.id,
+          })
         }
       />
       <OrderMetadataDialog

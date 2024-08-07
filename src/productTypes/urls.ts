@@ -49,8 +49,7 @@ export const productTypePath = (id: string) => urlJoin(productTypeSection, id);
 export type ProductTypeUrlDialog =
   | "assign-attribute"
   | "unassign-attribute"
-  | "unassign-product-attributes"
-  | "unassign-variant-attributes"
+  | "unassign-attributes"
   | "remove";
 export type ProductTypeUrlQueryParams = BulkAction &
   Dialog<ProductTypeUrlDialog> &

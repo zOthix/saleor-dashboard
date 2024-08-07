@@ -79,10 +79,6 @@ export const ProductOrganization: React.FC<ProductOrganizationProps> = props => 
     errors,
   );
   const [categoryInputActive, setCategoryInputActive] = React.useState(false);
-
-  // Input is hide to proper handle showing nested category structure
-  const hideInput = !categoryInputActive && data.category && !disabled;
-
   const noCategoryError =
     formErrors.isPublished?.code === ProductErrorCode.PRODUCT_WITHOUT_CATEGORY
       ? formErrors.isPublished
@@ -165,11 +161,12 @@ export const ProductOrganization: React.FC<ProductOrganizationProps> = props => 
               id: "ccXLVi",
               defaultMessage: "Category",
             })}
-            {...(hideInput && {
-              width: "100%",
-              __opacity: 0,
-              position: "absolute",
-            })}
+            {...(!categoryInputActive &&
+              !disabled && {
+                width: "100%",
+                __opacity: 0,
+                position: "absolute",
+              })}
             onFocus={() => {
               setCategoryInputActive(true);
             }}

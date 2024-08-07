@@ -1,9 +1,8 @@
-import { Route } from "@dashboard/components/Router";
 import { sectionNames } from "@dashboard/intl";
 import { parse as parseQs } from "qs";
 import React from "react";
 import { useIntl } from "react-intl";
-import { RouteComponentProps, Switch } from "react-router-dom";
+import { Route, RouteComponentProps, Switch } from "react-router-dom";
 
 import { WindowTitle } from "../components/WindowTitle";
 import {

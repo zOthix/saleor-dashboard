@@ -142,7 +142,7 @@ const StaffProperties: React.FC<StaffPropertiesProps> = props => {
     <DashboardCard className={className} data-test-id="staff-member-information">
       <DashboardCard.Header
         style={{
-          direction: locale === "ar" ? "rtl" : "ltr",
+          direction: locale === "iw-IL" ? "rtl" : "ltr",
           // flexDirection: locale === "ar" ? "row-reverse" : "row",
         }}
       >
@@ -155,7 +155,7 @@ const StaffProperties: React.FC<StaffPropertiesProps> = props => {
         </DashboardCard.Title>
       </DashboardCard.Header>
       <DashboardCard.Content>
-        <div className={classes.root} style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+        <div className={classes.root} style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}>
           <div>
             <div className={classes.avatar}>
               {hasAvatar ? (

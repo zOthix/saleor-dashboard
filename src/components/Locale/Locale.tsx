@@ -46,7 +46,7 @@ export enum Locale {
   VI = "vi",
   ZH_HANS = "zh-Hans",
   ZH_HANT = "zh-Hant",
-  UR = "ur",
+  IW_IL = "iw-IL",
 }
 
 interface StructuredMessage {
@@ -98,7 +98,7 @@ export const localeNames: Record<Locale, string> = {
   [Locale.VI]: "Tiếng Việt",
   [Locale.ZH_HANS]: "简体中文",
   [Locale.ZH_HANT]: "繁體中文",
-  [Locale.UR]: "Urdu",
+  [Locale.IW_IL]: "Hebrew",
 };
 
 const dotSeparator = "_dot_";

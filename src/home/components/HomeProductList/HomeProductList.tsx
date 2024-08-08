@@ -112,7 +112,7 @@ export const HomeProductList = ({ topProducts, testId }: HomeProductListProps) =
           ),
           () => (
             <Box borderColor="default1" borderWidth={1} paddingY={5} borderBottomStyle="solid">
-              <Text size={3} style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+              <Text size={3} style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}>
                 <FormattedMessage id="Q1Uzbb" defaultMessage="No products found" />
               </Text>
             </Box>

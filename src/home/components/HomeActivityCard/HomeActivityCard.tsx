@@ -57,7 +57,7 @@ export const HomeActivityCard = ({ activities, testId }: HomeActivityCardProps) 
 
   return (
     <DashboardCard data-test-id={testId}>
-      <DashboardCard.Header style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+      <DashboardCard.Header style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}>
         <DashboardCard.Title>{title}</DashboardCard.Title>
       </DashboardCard.Header>
       <DashboardCard.Content>
@@ -80,8 +80,8 @@ export const HomeActivityCard = ({ activities, testId }: HomeActivityCardProps) 
                   <>
                     <Text
                       style={{
-                        direction: locale === "ar" ? "rtl" : "ltr",
-                        textAlign: locale === "ar" ? "right" : "left",
+                        direction: locale === "iw-IL" ? "rtl" : "ltr",
+                        textAlign: locale === "iw-IL" ? "right" : "left",
                         width: "100%",
                       }}
                       size={3}
@@ -92,8 +92,8 @@ export const HomeActivityCard = ({ activities, testId }: HomeActivityCardProps) 
                       size={3}
                       color="default2"
                       style={{
-                        direction: locale === "ar" ? "rtl" : "ltr",
-                        textAlign: locale === "ar" ? "right" : "left",
+                        direction: locale === "iw-IL" ? "rtl" : "ltr",
+                        textAlign: locale === "iw-IL" ? "right" : "left",
                         width: "100%",
                       }}
                     >

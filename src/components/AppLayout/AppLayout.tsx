@@ -18,13 +18,14 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   const classes = useStyles();
   const { setAnchor } = useSavebarRef();
   const [appState] = useAppState();
+  const locale = localStorage.getItem("locale");
 
   return (
     <>
       <DevModePanel />
       <NavigatorSearch />
 
-      <Box display="grid" __gridTemplateColumns="auto 1fr">
+      <Box display="grid" __gridTemplateColumns="auto 1fr" style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}>
         {appState.loading && <LinearProgress className={classes.appLoader} color="primary" />}
         <Box
           height="100vh"

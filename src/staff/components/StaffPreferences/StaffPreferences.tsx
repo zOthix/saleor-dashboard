@@ -80,11 +80,10 @@ const StaffPreferences: React.FC<StaffPreferencesProps> = ({
       </DashboardCard.Content>
       <DashboardCard.Content>
         <Combobox
-          // helperText={intl.formatMessage({
-          //   id: "JJgJwi",
-          //   defaultMessage: "Selecting this will change the language of your dashboard",
-          // })}
-          helperText={"Selecting this will change the language of your store front"}
+          helperText={intl.formatMessage({
+            id: "JJgJwj",
+            defaultMessage: "Selecting this will change the language of your store front",
+          })}
           label={intl.formatMessage({
             id: "mr9jbO",
             defaultMessage: "Preferred Language",

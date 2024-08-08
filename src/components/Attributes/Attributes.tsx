@@ -80,7 +80,7 @@ export const Attributes: React.FC<AttributesProps> = ({
         <Box display="flex" flexDirection="column" gap={1}>
           <Accordion
             defaultValue="attributes-accordion"
-            style={{ direction: locale === "ar" ? "rtl" : "ltr" }}
+            style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}
           >
             <Accordion.Item value="attributes-accordion" style={{ direction: "ltr" }}>
               <Accordion.Trigger

@@ -44,7 +44,7 @@ export const ProductDetailsForm: React.FC<ProductDetailsFormProps> = ({
       <DashboardCard.Content display="grid" gap={2}>
         <Input
           label={
-            <div style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+            <div style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}>
               {intl.formatMessage({
                 id: "6AMFki",
                 defaultMessage: "Name",
@@ -59,7 +59,7 @@ export const ProductDetailsForm: React.FC<ProductDetailsFormProps> = ({
           name="name"
           disabled={disabled}
           helperText={getProductErrorMessage(formErrors.name, intl)}
-          style={{ direction: locale === "ar" ? "rtl" : "ltr" }}
+          style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}
         />
 
         {isReadyForMount ? (

@@ -16,7 +16,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ userName }: HomeHeaderPr
         fontWeight="bold"
         as="h4"
         data-test-id="welcome-header"
-        style={{ direction: locale === "ar" ? "rtl" : "ltr" }}
+        style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}
       >
         {userName ? (
           <FormattedMessage
@@ -33,7 +33,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ userName }: HomeHeaderPr
       </Text>
       <Text>
         {userName ? (
-          <div style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+          <div style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}>
             <FormattedMessage
               id="aCX8rl"
               defaultMessage="Here is some information we gathered about your store"

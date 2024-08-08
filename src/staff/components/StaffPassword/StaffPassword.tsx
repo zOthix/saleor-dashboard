@@ -15,7 +15,7 @@ const StaffPassword: React.FC<StaffPasswordProps> = ({ onChangePassword, locale 
 
   return (
     <DashboardCard>
-      <DashboardCard.Header style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+      <DashboardCard.Header style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}>
         <DashboardCard.Title>
           {intl.formatMessage({
             id: "ZhDQel",

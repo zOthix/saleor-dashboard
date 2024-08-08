@@ -68,7 +68,7 @@ const PageHeader: React.FC<PageHeaderProps> = props => {
         inline={inline}
         underline={underline}
         title={
-          <div style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+          <div style={{ direction: locale === "iw-IL" ? "rtl" : "ltr" }}>
             <Text className={classes.title} size={6} fontWeight="bold" lineHeight={3}>
               {title !== undefined ? title : <Skeleton style={{ width: "10em" }} />}
             </Text>

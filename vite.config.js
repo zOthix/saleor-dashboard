@@ -36,6 +36,9 @@ const copyOgImage = () => ({
 export default defineConfig(({ command, mode }) => {
   const isDev = command !== "build";
   const env = loadEnv(mode, process.cwd(), "");
+
+  console.log("Building to:", path.resolve(__dirname, "build/dashboard"));
+
   /*
     Using explicit env variables, there is no need to expose all of them (security).
   */
@@ -174,7 +177,7 @@ export default defineConfig(({ command, mode }) => {
       sourcemap,
       minify: false,
       emptyOutDir: true,
-      outDir: "../build/dashboard",
+      outDir: "build/dashboard",
       assetsDir: ".",
       commonjsOptions: {
         /*

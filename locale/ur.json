@@ -1,0 +1,1284 @@
+{
+  "++8ZWj": {
+    "context": "Transaction event status - requested",
+    "string": "درخواست کی گئی"
+  },
+  "+2VydL": {
+    "context": "card title",
+    "string": "ممالک کے لئے مستثنیات"
+  },
+  "+2VzH4": {
+    "context": "avatar change button",
+    "string": "تبدیل کریں"
+  },
+  "+43JV5": {
+    "context": "header",
+    "string": "مصنوعات {categoryName} میں"
+  },
+  "+5HkZN": {
+    "context": "order, button",
+    "string": "ادا شدہ کے طور پر نشان لگائیں"
+  },
+  "+7OsyM": {
+    "context": "button",
+    "string": "بطور ڈیفالٹ شپنگ ایڈریس مقرر کریں"
+  },
+  "+8v1ny": {
+    "context": "discount button",
+    "string": "رعایت"
+  },
+  "+B25o/": {
+    "context": "dialog header",
+    "string": "آرڈر کو ادا شدہ کے طور پر نشان لگائیں"
+  },
+  "+CeEe3": {
+    "context": "order shipping method name",
+    "string": "ترسیل"
+  },
+  "+HuipK": {
+    "context": "variant sku",
+    "string": "مصنوعات کا کوڈ (SKU) {sku}"
+  },
+  "+Jgot0": {
+    "context": "tax class for a product type",
+    "string": "ٹیکس کی شرح"
+  },
+  "+MJW+8": {
+    "context": "button",
+    "string": "رعایت دیں"
+  },
+  "+NUzaQ": {
+    "context": "check to mark this account as active",
+    "string": "صارف کا اکاؤنٹ فعال ہے"
+  },
+  "+PbHKD": {
+    "context": "dialog header",
+    "string": "ادائیگی وصول کریں"
+  },
+  "+PclgM": {
+    "context": "table column header",
+    "string": "کل رقم"
+  },
+  "+RffqY": {
+    "context": "Dry run dialog object title",
+    "string": "درخواست کے ابتدائی عمل کو انجام دینے کے لئے آبجیکٹ کی قسم منتخب کریں"
+  },
+  "+RjQjs": {
+    "context": "return button",
+    "string": "آرڈر کی واپسی / تبادلہ"
+  },
+  "+SYLEL": {
+    "context": "refunded fulfillment, section header",
+    "string": "رقم کی واپسی"
+  },
+  "+T0oJ7": {
+    "context": "input label",
+    "string": "گمنام صارف کے لئے اسٹاک ریزرویشن (منٹوں میں)"
+  },
+  "+U6ozc": {
+    "string": "قسم"
+  },
+  "+VEhV8": {
+    "context": "product channels",
+    "string": "دستیابی"
+  },
+  "+WTmpr": {
+    "context": "disabled status option label",
+    "string": "غیر فعال"
+  },
+  "+a+2ug": {
+    "string": "اراکین"
+  },
+  "+b/qJ9": {
+    "string": "آرڈر ڈرافٹس کو حذف کریں"
+  },
+  "+b3KCV": {
+    "context": "button",
+    "string": "فعال کریں"
+  },
+  "+bhokL": {
+    "string": "رعایت تلاش کریں..."
+  },
+  "+do3gl": {
+    "context": "input helper text",
+    "string": "یہ نمبر ان آئٹمز کی تعداد کا تعین کرتا ہے جو چیک آؤٹ لائن میں خریدے جا سکتے ہیں۔ آپ ہر ورژن کے لئے اس ترتیب کو اوور رائیڈ کر سکتے ہیں۔ اس ترتیب کو خالی چھوڑنے کا مطلب ہے کہ کوئی پابندیاں نہیں ہیں۔"
+  },
+  "+hib+V": {
+    "context": "error message",
+    "string": "یہ صفہ پہلے ہی مقرر کیا گیا ہے۔"
+  },
+  "+iV0gu": {
+    "string": "اندرونی ایپلیکیشنز"
+  },
+  "+iVKR1": {
+    "context": "assign attribute value button",
+    "string": "قدر تفویض کریں"
+  },
+  "+jCDvp": {
+    "context": "section header",
+    "string": "دکان کی معلومات"
+  },
+  "+jHXT3": {
+    "context": "limit voucher",
+    "string": "صرف عملے کے لئے محدود"
+  },
+  "+kb2lM": {
+    "context": "dialog header",
+    "string": "پاس ورڈ تبدیل کریں"
+  },
+  "+mmPxn": {
+    "context": "page header",
+    "string": "پیسے واپس کریں"
+  },
+  "+pLi+M": {
+    "context": "issued by app label",
+    "string": "ایپلیکیشن کے ذریعے جاری کیا گیا"
+  },
+  "+sX7yS": {
+    "string": "عمل کامیابی کے ساتھ منظور ہو گیا ہے"
+  },
+  "+sXiWx": {
+    "context": "window title",
+    "string": "رقم کی واپسی میں ترمیم کریں"
+  },
+  "+svQBN": {
+    "context": "alert",
+    "string": "آرڈر کی حد پہنچ گئی ہے"
+  },
+  "+tIkAe": {
+    "context": "status",
+    "string": "حالت"
+  },
+  "+wpvnk": {
+    "context": "dialog title",
+    "string": "مجموعہ حذف کریں"
+  },
+  "+x4cZH": {
+    "string": "صرف عملے کے اراکین کو تفویض کیا جا سکتا ہے"
+  },
+  "+x84Ji": {
+    "context": "order status",
+    "string": "غیر تصدیق شدہ"
+  },
+  "+xTpT1": {
+    "string": "خصوصیات"
+  },
+  "//k1GX": {
+    "context": "expired on label",
+    "string": "پر میعاد ختم {date}"
+  },
+  "/0JckE": {
+    "context": "order marked as paid event title",
+    "string": "آرڈر کو ادا شدہ کے طور پر نشان زد کیا گیا"
+  },
+  "/0gMCW": {
+    "string": "صفحہ کو تازہ کریں یا دوسرے صفحے پر جائیں اور واپس آئیں۔"
+  },
+  "/2OOMe": {
+    "context": "product type shipping settings, section header",
+    "string": "ترسیل"
+  },
+  "/4bJkA": {
+    "context": "header field value, header",
+    "string": "قدر"
+  },
+  "/5r4he": {
+    "context": "label for button",
+    "string": "ملک شامل کریں"
+  },
+  "/68iG8": {
+    "context": "product export to csv file, header",
+    "string": "برآمد شدہ معلومات"
+  },
+  "/6uK4C": {
+    "context": "button",
+    "string": "مجموعے مقرر کریں"
+  },
+  "/8/Ffn": {
+    "context": "button",
+    "string": "دکھائیں"
+  },
+  "/AbHy4": {
+    "context": "creation label",
+    "string": "بنائیں"
+  },
+  "/BJQIq": {
+    "context": "dialog header",
+    "string": "ٹریسنگ کوڈ شامل کریں"
+  },
+  "/C//FB": {
+    "context": "header, allocated product quantity",
+    "string": "مختص"
+  },
+  "/DzBc6": {
+    "context": "section description",
+    "string": "اسٹریٹیجی اسٹاکس کی تخصیص اور ریزرویشنز کی ترجیحات کا تعین کرتی ہے۔"
+  },
+  "/ILyIf": {
+    "context": "tax classes menu header",
+    "string": "ٹیکس کی شرح کا لیبل"
+  },
+  "/KWNJW": {
+    "context": "order discount was updated event title",
+    "string": "آرڈر ڈسکاؤنٹ کو اپ ڈیٹ کیا گیا ہے"
+  },
+  "/L8wzi": {
+    "context": "dialog header",
+    "string": "پیج ٹائپ سے اٹریبیوٹ ہٹائیں"
+  },
+  "/Mcvt4": {
+    "context": "section header",
+    "string": "میڈیا"
+  },
+  "/PhkXi": {
+    "context": "section header",
+    "string": "انسٹال شدہ ایپس"
+  },
+  "/TF6BZ": {
+    "string": "مصنوعات تلاش کریں"
+  },
+  "/TK7QD": {
+    "context": "page label",
+    "string": "چھپا ہوا"
+  },
+  "/V7UOC": {
+    "context": "unassign category from sale and save, button",
+    "string": "منسوخ کریں اور محفوظ کریں"
+  },
+  "/WXs6H": {
+    "context": "collection name",
+    "string": "نام"
+  },
+  "/Xwjww": {
+    "context": "button",
+    "string": "عمل کریں"
+  },
+  "/Zee1r": {
+    "string": "صرف شامل کردہ پوسٹل کوڈز اس شپنگ کی قیمت استعمال کر سکیں گے"
+  },
+  "/cow4T": {
+    "context": "WarehousesSection select field placeholder",
+    "string": "اسٹاک منتخب کریں"
+  },
+  "/dnWE8": {
+    "context": "products in collection",
+    "string": "{name} میں مصنوعات"
+  },
+  "/eTYOp": {
+    "context": "app support",
+    "string": "مدد"
+  },
+  "/eWPsp": {
+    "string": "غلط کرنسی استعمال کی گئی ہے"
+  },
+  "/glQgs": {
+    "string": "کوئی چینلز نہیں ملے"
+  },
+  "/iijFq": {
+    "context": "input label",
+    "string": "عالمی حد"
+  },
+  "/kWzY1": {
+    "string": "کیا آپ واقعی اس ایڈریس کو ہٹانا چاہتے ہیں؟"
+  },
+  "/lBLBI": {
+    "context": "channels alphabetically title",
+    "string": "چینلز (A-Z)"
+  },
+  "/nZy6A": {
+    "context": "page subtitle",
+    "string": "رقم کی واپسی جاری کریں"
+  },
+  "/oaqFS": {
+    "context": "section header",
+    "string": "قدر"
+  },
+  "/oyr6M": {
+    "context": "no variants",
+    "string": "کوئی متغیرات نہیں ملے"
+  },
+  "/qk66u": {
+    "context": "window title",
+    "string": "رقم کی واپسی جاری کریں #{orderNumber}"
+  },
+  "/vCXIP": {
+    "string": "ترجمہ"
+  },
+  "/w919H": {
+    "context": "OrderCustomer Fulfillment from Local Warehouse",
+    "string": "مقامی اسٹاک سے عمل کریں"
+  },
+  "/xJSe8": {
+    "context": "When users confirm their email account, all previous anonymous orders placed under the same email would be added to their order history.",
+    "string": "جب صارفین اپنے ای میل اکاؤنٹ کی تصدیق کرتے ہیں، تو اسی ای میل کے تحت کی گئی تمام پچھلی گمنام آرڈرز ان کی آرڈر ہسٹری میں شامل کی جائیں گی۔"
+  },
+  "/xXvjF": {
+    "context": "section header",
+    "string": "غیر تکمیل شدہ"
+  },
+  "/yJJvI": {
+    "context": "dialog header",
+    "string": "مصنوعات کی قسم منتخب کریں"
+  },
+  "/z9uo1": {
+    "context": "order returned success message",
+    "string": "مصنوعات کامیابی کے ساتھ واپس ہو گئی ہیں!"
+  },
+  "01+5kQ": {
+    "string": "ادا شدہ کے طور پر نشان لگائیں"
+  },
+  "05hqq6": {
+    "context": "checkbox label",
+    "string": "خودکار منظوری دیں"
+  },
+  "06bR4Z": {
+    "context": "order history message",
+    "string": "آرڈر منسوخی کی معلومات بھیج دی گئی ہیں"
+  },
+  "0AQH0Q": {
+    "string": "پلگ ان غلط ترتیب شدہ ہے"
+  },
+  "0DRBjg": {
+    "string": "ٹوکن نوٹ"
+  },
+  "0DgA8v": {
+    "context": "swatch attribute color picker label",
+    "string": "انتخاب"
+  },
+  "0FexL7": {
+    "context": "min price in channel",
+    "string": "کم سے کم قیمت"
+  },
+  "0HBlkO": {
+    "string": "چینلز تلاش کریں"
+  },
+  "0KmZCN": {
+    "context": "button",
+    "string": "GraphQL پلی گراؤنڈ کھولیں"
+  },
+  "0MetrR": {
+    "context": "webhook input help text",
+    "string": "یہ URL webhook POST درخواستیں وصول کرے گا"
+  },
+  "0Mg8o5": {
+    "context": "header",
+    "string": "ٹوکنز"
+  },
+  "0OfZJA": {
+    "context": "button",
+    "string": "واپس"
+  },
+  "0OtaXa": {
+    "context": "dialog header",
+    "string": "مینو بنائیں"
+  },
+  "0TQuo4": {
+    "context": "dialog header",
+    "string": "فروخت سے مجموعہ ہٹائیں"
+  },
+  "0V1q0d": {
+    "context": "add country dialog header",
+    "string": "ملک منتخب کریں"
+  },
+  "0VDwAP": {
+    "context": "checkbox label",
+    "string": "تفصیلات بھیجیں"
+  },
+  "0VkxrS": {
+    "string": "GraphQL پلی گراؤنڈ"
+  },
+  "0Vyr8h": {
+    "context": "menu item name",
+    "string": "نام"
+  },
+  "0XHXTZ": {
+    "context": "column header",
+    "string": "عنوان"
+  },
+  "0a0fLZ": {
+    "context": "countries list menu label when no countries are assigned",
+    "string": "کوئی ممالک تفویض نہیں کیے گئے"
+  },
+  "0dPP8O": {
+    "string": "آرڈر #{orderId} ہو چکی ہے"
+  },
+  "0em8tI": {
+    "context": "ProductTypeDeleteWarningDialog multiple consent label",
+    "string": "ہاں، میں ان پروڈکٹ کی اقسام کو حذف کرنا چاہتا ہوں"
+  },
+  "0fM/pV": {
+    "context": "message title",
+    "string": "ایپ انسٹال ہو چکی ہے"
+  },
+  "0iMYc+": {
+    "context": "field is optional",
+    "string": "(اختیاری)"
+  },
+  "0kPdlb": {
+    "context": "deprecated secret key toolbar label",
+    "string": "RS256 کے ساتھ دستخط کریں۔"
+  },
+  "0krqBj": {
+    "context": "page header",
+    "string": "آرڈر نمبر: {orderNumber} - شکایت"
+  },
+  "0mhR+F": {
+    "context": "Header row quantity label",
+    "string": "مقدار"
+  },
+  "0nL1D6": {
+    "context": "number of menu items",
+    "string": "اشیاء"
+  },
+  "0nLsyM": {
+    "string": "کوئی مصنوعات کی اقسام نہیں ملی"
+  },
+  "0oo+BT": {
+    "context": "section header",
+    "string": "رقم کی واپسی"
+  },
+  "0qg33z": {
+    "context": "table column header",
+    "string": "واپسی"
+  },
+  "0sd4ez": {
+    "context": "selected customer channel subtitle",
+    "string": "گفٹ کارڈ کا کوڈ چینل کے ای میل پر بھیجا جائے گا"
+  },
+  "0u9Ng0": {
+    "context": "Dry run no objects found",
+    "string": "کوئی اشیاء نہیں ملیں"
+  },
+  "0vsMRq": {
+    "context": "delete custom app",
+    "string": "اس ایپلیکیشن کو حذف کرنے سے، آپ تمام ڈیٹا اور webhook کو بھی حذف کر دیں گے۔"
+  },
+  "0whAeC": {
+    "context": "sum of all pending refunds inside an order",
+    "string": "زیر التوا واپسی"
+  },
+  "1+ROfp": {
+    "string": "ٹرانزیکشن"
+  },
+  "1/oG76": {
+    "context": "dialog header",
+    "string": "فروخت حذف کریں"
+  },
+  "1/oauz": {
+    "context": "grant refund table, column header",
+    "string": "واپسی کی مقدار"
+  },
+  "11lR5V": {
+    "context": "avatar delete button",
+    "string": "حذف کریں"
+  },
+  "129wyQ": {
+    "context": "dialog header",
+    "string": "گاہک کا شپنگ ایڈریس تبدیل کریں"
+  },
+  "15PiOX": {
+    "context": "button title",
+    "string": "ہٹائیں"
+  },
+  "15fg+o": {
+    "context": "weeks after label",
+    "string": "اجراء کے بعد ہفتے"
+  },
+  "16Dpgb": {
+    "context": "Synchronous events description",
+    "string": "ہم وقت ساز webhook مواد بھیجتا ہے اور عمل کو جاری رکھنے کے لئے ہدف URL سے جواب کا انتظار کرتا ہے۔"
+  },
+  "16PGt9": {
+    "context": "WarehouseSettings all warehouses label",
+    "string": "تمام گودام"
+  },
+  "16iwCI": {
+    "context": "section header",
+    "string": "مکمل"
+  },
+  "16sza6": {
+    "string": "رقم کی واپسی جو بعد میں صارفین کو ان کے اصل ادائیگی کے طریقوں یا دستی لین دین کے ذریعے بھیجی جا سکتی ہے۔"
+  },
+  "18wvf7": {
+    "context": "section header",
+    "string": "آرڈر کی تفصیلات"
+  },
+  "19/lwV": {
+    "string": "پروڈکٹ کی اقسام بنانے کے لئے استعمال ہونے والی صفات کی وضاحت کریں"
+  },
+  "1BNKCZ": {
+    "context": "sale channel",
+    "string": "چینل"
+  },
+  "1GTU/3": {
+    "context": "replaced event title",
+    "string": "مصنوعات کو تبدیل کیا گیا"
+  },
+  "1H+V6k": {
+    "context": "error message",
+    "string": "ایسی صفات والا صفحہ پہلے سے موجود ہے۔"
+  },
+  "1J/bhZ": {
+    "context": "expiry date section header",
+    "string": "صالحیت کی تاریخ"
+  },
+  "1KSqnn": {
+    "context": "tab name",
+    "string": "تمام اقسام"
+  },
+  "1LBYpE": {
+    "context": "dialog header",
+    "string": "مینیوز حذف کریں"
+  },
+  "1LiVhv": {
+    "context": "section header",
+    "string": "حالیہ آرڈرز"
+  },
+  "1T1fP8": {
+    "context": "range input label",
+    "string": "پوسٹل کوڈز (آغاز)"
+  },
+  "1UKx20": {
+    "context": "header",
+    "string": "شپنگ میتھڈ کا ترجمہ \"{shippingMethodName}\" - {languageCode}"
+  },
+  "1Uj0Wd": {
+    "context": "order draft total price",
+    "string": "کل"
+  },
+  "1WbTJ5": {
+    "context": "product variants, title",
+    "string": "متغیرات"
+  },
+  "1X6HtI": {
+    "string": "تمام اقسام"
+  },
+  "1gzck6": {
+    "string": "{firstName} {lastName}"
+  },
+  "1lk/oS": {
+    "context": "button",
+    "string": "پوسٹل کوڈ کی حد شامل کریں"
+  },
+  "1n1tOR": {
+    "string": "گروپ آپ کے اختیار سے باہر ہے"
+  },
+  "1oYjZc": {
+    "context": "sum of all granted refunds for an order",
+    "string": "واپس کی گئی رقم"
+  },
+  "1rpzrM": {
+    "context": "search placeholder",
+    "string": "ملک کے نام سے تلاش کریں"
+  },
+  "1shOIS": {
+    "context": "column title",
+    "string": "قیمت"
+  },
+  "1tXSSK": {
+    "context": "header",
+    "string": "واؤچر کا ترجمہ Voucher \"{voucherName}\" - {languageCode}"
+  },
+  "1wyZpQ": {
+    "string": "پاس ورڈز بہت زیادہ مماثل ہیں"
+  },
+  "1zuQ2P": {
+    "context": "unassign country",
+    "string": "کیا آپ واقعی {countryName} کو اس شپنگ زون سے ہٹانا چاہتے ہیں؟"
+  },
+  "2+v1wX": {
+    "context": "number of metadata fields in model",
+    "string": "{number,plural,one{{number} سٹرنگ} other{{number} سٹرنگز}}"
+  },
+  "2/L4zZ": {
+    "string": "تمام چینلز منتخب کریں"
+  },
+  "22x9tu": {
+    "context": "header",
+    "string": "پروڈکٹ کا ترجمہ Product \"{productName}\" - {languageCode}"
+  },
+  "23g7PY": {
+    "context": "dialog header",
+    "string": "عملے کے رکن کو مدعو کریں"
+  },
+  "26+K4N": {
+    "string": "آپ نے جو فائل بطور تصویر اپلوڈ کی اس میں مسئلہ تھا اور اسے استعمال نہیں کیا جا سکتا۔ براہ کرم دوسری فائل آزمائیں۔"
+  },
+  "26BKkX": {
+    "context": "order status",
+    "string": "جزوی طور پر واپس"
+  },
+  "28GZnc": {
+    "string": "تلاش شروع کرنے کے لئے ٹائپ کرنا شروع کریں..."
+  },
+  "29L5Yq": {
+    "context": "gift card not found message",
+    "string": "گفٹ کارڈ نہیں ملا"
+  },
+  "2BHjVL": {
+    "context": "header",
+    "string": "کسٹم request headers"
+  },
+  "2CBcub": {
+    "context": "CreateVariantTitle manage",
+    "string": "انتظام کریں"
+  },
+  "2FQsYj": {
+    "context": "button",
+    "string": "صاف کریں"
+  },
+  "2HfSiT": {
+    "context": "pagination",
+    "string": "صفوں کی تعداد"
+  },
+  "2J6EFz": {
+    "context": "button",
+    "string": "میڈیا منتخب کریں"
+  },
+  "2JBvj0": {
+    "context": "export products to csv file, button",
+    "string": "مصنوعات برآمد کریں"
+  },
+  "2MKBk2": {
+    "context": "window title",
+    "string": "آرڈر # {orderNumber} مکمل کریں"
+  },
+  "2MKkgX": {
+    "context": "checkbox label",
+    "string": "ادائیگی کے بغیر تکمیل کی اجازت دیں"
+  },
+  "2NgTCJ": {
+    "string": "اس کوڈ (SKU) کے ساتھ ایک پروڈکٹ پہلے سے موجود ہے"
+  },
+  "2OH46U": {
+    "context": "search modal shipping title",
+    "string": "شپنگ ایڈریس"
+  },
+  "2RYRdr": {
+    "context": "webhooks active label",
+    "string": "فعال"
+  },
+  "2Sx05f": {
+    "context": "Previous discount label",
+    "string": "پچھلی رعایت کی قیمت"
+  },
+  "2VSP8C": {
+    "context": "delete token",
+    "string": "کیا آپ واقعی {token} کو حذف کرنا چاہتے ہیں؟"
+  },
+  "2W4EBM": {
+    "context": "button",
+    "string": "زیادہ سے زیادہ مقدار مقرر کریں"
+  },
+  "2WenNh": {
+    "string": "دعویٰ بھیجنا"
+  },
+  "2Xt+sw": {
+    "context": "dialog header",
+    "string": "پوسٹل کوڈ شامل کریں"
+  },
+  "2Zyit2": {
+    "context": "delete page types with its pages",
+    "string": "{counter,plural,one{صفحہ کی قسم جو آپ حذف کرنا چاہتے ہیں دوسرے صفحات کے ذریعے استعمال کی جا رہی ہے۔ اس قسم کے صفحہ کو حذف کرنے سے یہ صفحات بھی حذف ہو جائیں گے۔ کیا آپ واقعی اس صفحہ کی قسم کو حذف کرنا چاہتے ہیں؟ حذف کرنے کے بعد، آپ تبدیلیاں واپس نہیں کر سکیں گے۔} other{صفحہ کی اقسام جو آپ حذف کرنا چاہتے ہیں کچھ صفحات کے ذریعے استعمال کی جا رہی ہیں۔ ان صفحہ کی اقسام کو حذف کرنے سے یہ صفحات بھی حذف ہو جائیں گے۔ کیا آپ واقعی {displayQuantity} صفحہ کی اقسام کو حذف کرنا چاہتے ہیں؟ حذف کرنے کے بعد، آپ تبدیلیاں واپس نہیں کر سکیں گے۔}}"
+  },
+  "2atspc": {
+    "string": "مسودات"
+  },
+  "2cjt25": {
+    "context": "window title",
+    "string": "ایپ انسٹال کریں"
+  },
+  "2fgaAQ": {
+    "context": "search input placeholder",
+    "string": "شپنگ زونز میں تلاش کریں..."
+  },
+  "2gsiR1": {
+    "string": "کوئی گودام نہیں ملے"
+  },
+  "2i81/P": {
+    "context": "section header button",
+    "string": "انتظام کریں"
+  },
+  "2ob30/": {
+    "string": "کامیابی! کچھ منٹ میں آپ کو اپنی پاس ورڈ کو تبدیل کرنے کے طریقہ کار کے ساتھ ایک پیغام موصول ہو گا۔"
+  },
+  "2oyWT9": {
+    "context": "button",
+    "string": "واپس لاگ ان پر"
+  },
+  "2p0tZx": {
+    "context": "delete customer, dialog content",
+    "string": "کیا آپ واقعی {email} کو حذف کرنا چاہتے ہیں؟"
+  },
+  "2pw5dQ": {
+    "context": "payment status",
+    "string": "مکمل طور پر ادا شدہ"
+  },
+  "2rJcFa": {
+    "context": "delete app",
+    "string": "اس ایپلیکیشن کو حذف کرنے سے، آپ ایپلیکیشن کی تنصیب کو ہٹا دیں گے۔ اگر آپ کو یقین ہے تو، آپ ایپلیکیشن کو محفوظ طریقے سے حذف کر سکتے ہیں۔"
+  },
+  "2x9ZgK": {
+    "context": "card title",
+    "string": "شکایات کے لیے بیلنس"
+  },
+  "2yU+q9": {
+    "context": "tab name",
+    "string": "تمام رنگ"
+  },
+  "2yV+s8": {
+    "context": "order history message",
+    "string": "ادائیگی کو ضبط کر لیا گیا"
+  },
+  "2zCmiR": {
+    "context": "tabel column header",
+    "string": "قیمت"
+  },
+  "3+990c": {
+    "context": "button",
+    "string": "تمام آرڈرز دیکھیں"
+  },
+  "3+KwtP": {
+    "context": "VariantDetailsChannelsAvailabilityCard subtitle",
+    "string": "{publishedInChannelsCount} میں سے {availableChannelsCount} چینلز پر دستیاب"
+  },
+  "30X9S8": {
+    "context": "gift card history message",
+    "string": "گفٹ کارڈ جاری کیا گیا {issuedBy} کے ذریعے"
+  },
+  "31hYP2": {
+    "context": "alert card message",
+    "string": "گفٹ کارڈز اس وقت ظاہر ہوں گے جب آرڈر مکمل ہو جائے گا۔ <link>گفٹ کارڈز کے ساتھ آرڈرز دیکھیں</link>"
+  },
+  "32dfzI": {
+    "context": "price or ordered products",
+    "string": "قیمت"
+  },
+  "34F7Jk": {
+    "context": "filter range separator",
+    "string": "اور"
+  },
+  "38dS1A": {
+    "context": "code ending with label",
+    "string": "{last4CodeChars} کے ساتھ ختم ہونے والا کوڈ"
+  },
+  "38dc43": {
+    "context": "Features preview",
+    "string": "نئی خصوصیات کا پیش نظارہ"
+  },
+  "39yi8w": {
+    "context": "selected currency",
+    "string": "منتخب کردہ کرنسی"
+  },
+  "3AqOxp": {
+    "context": "no category set error",
+    "string": "پروڈکٹ کیٹیگری سیٹ نہیں کی گئی"
+  },
+  "3C3Nj5": {
+    "context": "button",
+    "string": "ویریئنٹ شامل کریں"
+  },
+  "3DGvA/": {
+    "string": "یاد رکھیں کہ یہ اس زمرے پر سیٹ کردہ تمام پروڈکٹس کو بھی منقطع کرے گا، جس سے یہ اسٹور میں دستیاب نہیں ہوں گے۔"
+  },
+  "3PVGWj": {
+    "string": "فلٹر کی پہلے سے سیٹنگ"
+  },
+  "3SVI5p": {
+    "string": "احتیاط"
+  },
+  "3Sz1/t": {
+    "context": "dialog header",
+    "string": "صفحات کو حذف کریں"
+  },
+  "3TlhJS": {
+    "context": "navigator command mode description",
+    "string": "تلاش کا حکم"
+  },
+  "3Z8972": {
+    "context": "product",
+    "string": "اسٹاک کی مقدار"
+  },
+  "3a5wL8": {
+    "string": "فعال"
+  },
+  "3bQz2o": {
+    "context": "bulk issue gift cards success alert title",
+    "string": "جاری کردہ گفٹ کارڈز"
+  },
+  "3d1RXL": {
+    "string": "اس کلائنٹ کے پاس ابھی تک کوئی ایڈریس نہیں ہے"
+  },
+  "3dVKNR": {
+    "context": "ProductTypeDeleteWarningDialog with items multiple description",
+    "string": "آپ کئی پروڈکٹ کی اقسام کو حذف کرنے والے ہیں۔ ان میں سے کچھ پروڈکٹس پر سیٹ ہیں۔ ان پروڈکٹ کی اقسام کو حذف کرنے سے یہ پروڈکٹس بھی حذف ہو جائیں گے"
+  },
+  "3evXPj": {
+    "string": "اپنی نوٹ یہاں چھوڑیں..."
+  },
+  "3fgyFh": {
+    "context": "order history message",
+    "string": "ادائیگی واپس کی گئی"
+  },
+  "3kwdxJ": {
+    "context": "gift card export type label",
+    "string": "گفٹ کارڈز"
+  },
+  "3oQzWR": {
+    "context": "product availability",
+    "string": "شائع ہونے کی تاریخ مقرر کریں"
+  },
+  "3psvRS": {
+    "context": "attribute values list: slug column header",
+    "string": "ایڈمن"
+  },
+  "3rIMq/": {
+    "context": "product shipping",
+    "string": "ڈیلیوری"
+  },
+  "3tbL7x": {
+    "context": "description",
+    "string": "پاسورڈ بھول گئے؟"
+  },
+  "3u+4NZ": {
+    "string": "انوائس ای میل بھیج دی گئی ہے"
+  },
+  "3ukd9/": {
+    "context": "attributes, section header",
+    "string": "خوبیات"
+  },
+  "3y4r+z": {
+    "context": "channel settings",
+    "string": "چینل کی ترتیبات"
+  },
+  "3zdm8A": {
+    "context": "Dialog title",
+    "string": "{actionType} لین دین"
+  },
+  "408KSO": {
+    "context": "gift card history message",
+    "string": "گفٹ کارڈ کو آرڈر {orderLink} میں ادائیگی کے طریقے کے طور پر استعمال کیا گیا"
+  },
+  "41z2Qi": {
+    "context": "notification",
+    "string": "حذف کردہ صفحات"
+  },
+  "423QsF": {
+    "context": "option title",
+    "string": "زیادہ اسٹاک والے گوداموں کو ترجیح دیں"
+  },
+  "43AOvZ": {
+    "context": "alert group message",
+    "string": "آپ اس ڈرافٹ کو مکمل نہیں کر سکیں گے کیونکہ:"
+  },
+  "43Nlay": {
+    "context": "warehouse",
+    "string": "پتے کی معلومات"
+  },
+  "43QkTW": {
+    "context": "Transaction capture button - charge preauthorized transaction amount",
+    "string": "ضبط کریں"
+  },
+  "450Fty": {
+    "string": "کوئی نہیں"
+  },
+  "45aV8u": {
+    "context": "gift card bulk create modal bottom explanation",
+    "string": "تخلیق کے بعد Saleor ایک گفٹ کارڈ کوڈز کی فہرست تخلیق کرے گا جسے آپ ڈاؤن لوڈ کرسکتے ہیں۔"
+  },
+  "45zP+r": {
+    "context": "voucher discount",
+    "string": "خصوصی پروڈکٹس"
+  },
+  "47hJzu": {
+    "string": "ایپ کی اجازتیں اپ ڈیٹ کی گئی ہیں"
+  },
+  "483Xnh": {
+    "context": "open full-screen",
+    "string": "کھولیں"
+  },
+  "48dMqY": {
+    "context": "Dry run trigger button",
+    "string": "شروع کریں"
+  },
+  "4B32Ba": {
+    "context": "delete page",
+    "string": "کیا آپ واقعی {title} کو حذف کرنا چاہتے ہیں؟"
+  },
+  "4C7I61": {
+    "context": "sale Details delete button",
+    "string": "حذف شدہ فروخت"
+  },
+  "4Dc2j0": {
+    "context": "order status",
+    "string": "واپس"
+  },
+  "4ELCCk": {
+    "context": "column picker section default header",
+    "string": "زمرے"
+  },
+  "4IgzXs": {
+    "context": "label",
+    "string": "ایپ مینی فیسٹ یو آر ایل"
+  },
+  "4JW9iJ": {
+    "context": "home section name",
+    "string": "گھر"
+  },
+  "4JcNaA": {
+    "context": "button",
+    "string": "عملے کا رکن مدعو کریں"
+  },
+  "4Jp83O": {
+    "context": "subheader",
+    "string": "رابطہ کی معلومات"
+  },
+  "4Kq3O6": {
+    "string": "یہ یونٹ ڈیفالٹ شپنگ وزن کے طور پر استعمال کیا جائے گا"
+  },
+  "4PlW0w": {
+    "context": "tracking number",
+    "string": "ٹریکنگ نمبر: {trackingNumber}"
+  },
+  "4T/RzC": {
+    "string": "یقین دہانی کریں کہ آپ نے ٹوکن محفوظ کر لیا ہے، آپ اسے دوبارہ نہیں دیکھ سکیں گے۔"
+  },
+  "4VOIum": {
+    "context": "product availability",
+    "string": "اس چیک باکس کو فعال کرنے سے پروڈکٹ تلاش کے صفحات اور زمرے سے ہٹا دیا جائے گا۔ یہ مجموعہ کے صفحات پر دستیاب رہے گا۔"
+  },
+  "4W/CKn": {
+    "context": "modal button",
+    "string": "اپ لوڈ یو آر ایل"
+  },
+  "4XhJY+": {
+    "context": "dialog header",
+    "string": "{channelName} سے پروڈکٹ شامل کریں"
+  },
+  "4Z0O2B": {
+    "context": "section header title",
+    "string": "گفٹ کارڈز کا شیڈول"
+  },
+  "4Z14xW": {
+    "context": "button",
+    "string": "مکمل کریں"
+  },
+  "4Z6BtA": {
+    "context": "order history message",
+    "string": "ادائیگی کی تصدیق گاہک کو بھیج دی گئی ہے"
+  },
+  "4fJ17F": {
+    "context": "Charge in progress transaction amount, data display header",
+    "string": "قریب آنے والا چارج"
+  },
+  "4gT3eD": {
+    "context": "navigator section header",
+    "string": "گاہکوں میں تلاش کریں"
+  },
+  "4hl9rS": {
+    "context": "variant price in channel",
+    "string": "قیمت"
+  },
+  "4k9rMQ": {
+    "context": "variant attribute checkbox",
+    "string": "ویریئنٹ منتخب کریں"
+  },
+  "4p3bjX": {
+    "context": "tax strategy combobox choice",
+    "string": "فکسڈ ٹیکس استعمال کریں"
+  },
+  "4prRLv": {
+    "string": "اجازت آپ کے اختیار سے باہر ہے"
+  },
+  "4qe6hO": {
+    "context": "product stock, section header",
+    "string": "اسٹاک کی دستیابی"
+  },
+  "4v5gfh": {
+    "context": "account information, header",
+    "string": "پروفائل کی معلومات"
+  },
+  "4yRwN+": {
+    "context": "content",
+    "string": "Saleor اہم معلومات حاصل کرنے میں ناکام رہا ہے جو تنصیب کے لئے ضروری ہیں۔ ان کے بغیر، سسٹم آپ کے Saleor میں ایپلیکیشن انسٹال نہیں کر سکتا۔ براہ کرم نیچے دیے گئے بٹن کا استعمال کریں تاکہ آپ سسٹم کے ڈیش بورڈ پر واپس جا سکیں۔"
+  },
+  "54KYgS": {
+    "context": "months after label",
+    "string": "جاری ہونے کے بعد مہینے"
+  },
+  "54M0Gu": {
+    "string": "ہمیں ای میل فراہم کریں - اگر ہم اسے اپنے ڈیٹا بیس میں تلاش کر لیں، تو ہم آپ کو پاس ورڈ کی بازیابی کے لئے لنک بھیجیں گے۔ آپ کو اگلے چند منٹوں میں اپنے ان باکس میں یہ لنک مل جانا چاہئے۔"
+  },
+  "55LMJv": {
+    "context": "country list header",
+    "string": "ممالک"
+  },
+  "56vUeQ": {
+    "string": "پروڈکٹ کو مجموعہ میں شامل کیا گیا"
+  },
+  "577R2r": {
+    "string": "غیر موزوں قیمت"
+  },
+  "57IYpr": {
+    "context": "error message",
+    "string": "قیمت غیر موزوں ہے"
+  },
+  "59XppT": {
+    "context": "button",
+    "string": "منظور کریں"
+  },
+  "5A6/2C": {
+    "context": "section header",
+    "string": "دستیابی"
+  },
+  "5BajZK": {
+    "string": "اپنی سائٹ کی ترتیبات دیکھیں اور اپ ڈیٹ کریں"
+  },
+  "5HwLx9": {
+    "context": "alert",
+    "string": "گودام کی حد پہنچ گئی ہے"
+  },
+  "5I7Lc2": {
+    "context": "dialog header",
+    "string": "صفحات ترتیب دیں"
+  },
+  "5JT4v2": {
+    "context": "dialog header",
+    "string": "بل بھیجیں"
+  },
+  "5JUEIh": {
+    "context": "field label, refund amount",
+    "string": "ریفنڈ کی رقم"
+  },
+  "5Jo3C5": {
+    "context": "vat not included in order price",
+    "string": "لاگو نہیں"
+  },
+  "5O8EIz": {
+    "context": "Authorize transactions instead of charging",
+    "string": "ٹرانزیکشنز کو مجاز کریں بجائے چارج کرنے کے"
+  },
+  "5ObBlW": {
+    "string": "تاریک موڈ"
+  },
+  "5OtU+V": {
+    "context": "dialog title",
+    "string": "مجموعے سے پروڈکٹ ہٹائیں"
+  },
+  "5QKsu+": {
+    "context": "waiting for export to end, header",
+    "string": "CSV ایکسپورٹ"
+  },
+  "5R4VMl": {
+    "context": "draft created from replace event title",
+    "string": "ڈرافٹ کو آرڈر سے دوبارہ جاری کیا گیا"
+  },
+  "5RmuD+": {
+    "string": "اپنے گودام کی معلومات کو منظم اور اپ ڈیٹ کریں"
+  },
+  "5SPHkk": {
+    "string": "آرڈر #{orderId} مکمل طور پر ادا کیا گیا"
+  },
+  "5TUpjG": {
+    "context": "product attribute entity type",
+    "string": "پروڈکٹس"
+  },
+  "5Vwnu+": {
+    "string": "آپ نے اپنے SKU کی حد تک پہنچ گیا ہے، آپ مزید SKU کو اپنے اسٹور میں شامل نہیں کر سکیں گے۔ اگر آپ اپنی حد بڑھانا چاہتے ہیں، تو انتظامیہ کے عملے سے رابطہ کریں تاکہ حد بڑھانے کے بارے میں بات چیت کی جا سکے۔"
+  },
+  "5XG1CO": {
+    "context": "acre-ft unit",
+    "string": "ایکڑ-فٹ"
+  },
+  "5ZYUn5": {
+    "context": "Filter and element text",
+    "string": "اور"
+  },
+  "5ZvuVw": {
+    "string": "درخواست کے مطابق کوئی پروڈکٹ نہیں ہے"
+  },
+  "5ZxAiY": {
+    "string": "ٹوکین"
+  },
+  "5aiFbL": {
+    "context": "tabel column header",
+    "string": "قیمت"
+  },
+  "5b0Boq": {
+    "context": "Dry run items list default message",
+    "string": "آبجیکٹ منتخب کریں"
+  },
+  "5bJ26s": {
+    "string": "صفحات کی قسم کامیابی سے تخلیق کی گئی"
+  },
+  "5blVMu": {
+    "context": "e-mail or full name",
+    "string": "گاہک"
+  },
+  "5dLpx0": {
+    "context": "references attribute type",
+    "string": "حوالہ جات"
+  },
+  "5dyOs0": {
+    "string": "کوئی ادائیگیاں منتقلی کے لیے انتظار میں نہیں ہیں"
+  },
+  "5elC9k": {
+    "context": "taxes section name",
+    "string": "ٹیکس"
+  },
+  "5fCMUI": {
+    "context": "translations section name",
+    "string": "ترجمے"
+  },
+  "5i/InH": {
+    "context": "open new window button",
+    "string": "اس آرڈر کو GraphiQL میں کھولیں"
+  },
+  "5kvaFR": {
+    "context": "product field",
+    "string": "ویریئنٹ SKU کو برآمد کریں"
+  },
+  "5o84YO": {
+    "context": "Filter where element text",
+    "string": "کہاں"
+  },
+  "5pHBSU": {
+    "context": "switch button",
+    "string": "پروڈکٹ کی قسم ویریئنٹ کی خصوصیات استعمال کرتی ہے"
+  },
+  "5sg7KC": {
+    "string": "پاس ورڈ"
+  },
+  "5t/4um": {
+    "context": "message title",
+    "string": "تنصیب ناکام رہی {name}"
+  },
+  "5tMkmJ": {
+    "context": "dialog header",
+    "string": "مجموعہ ترتیب دیں"
+  },
+  "5te3Tp": {
+    "context": "order payment",
+    "string": "غیر ادا شدہ بیلنس"
+  },
+  "5u7b3V": {
+    "context": "voucher is active from date",
+    "string": "شروع ہوتا ہے"
+  },
+  "5x6yT9": {
+    "context": "weight",
+    "string": "{fromValue} {fromUnit} - {toValue} {toUnit}"
+  },
+  "62T585": {
+    "context": "button",
+    "string": "{languageName} - {languageCode}"
+  },
+  "62Ywh2": {
+    "context": "number of countries",
+    "string": "{number} ممالک"
+  },
+  "64aQXZ": {
+    "context": "product variants, full-screen title",
+    "string": "ویریئنٹس: {name}"
+  },
+  "64aYF0": {
+    "context": "informations about product organization, header",
+    "string": "پروڈکٹ تنظیم"
+  },
+  "67V0c0": {
+    "context": "unassign product from collection, button",
+    "string": "ہٹائیں"
+  },
+  "6AMFki": {
+    "context": "product name",
+    "string": "نام"
+  },
+  "6D+yYX": {
+    "string": "ادائیگی کی حیثیت"
+  },
+  "6G41zU": {
+    "context": "WarehouseSettings local warehouse description",
+    "string": "اگر منتخب کیا جائے، تو صارف اس گودام کو وصولی کے مقام کے طور پر منتخب کر سکے گا۔ آرڈر کیے گئے پروڈکٹس صرف اس گودام کی دستیابی سے مکمل کیے جائیں گے"
+  },
+  "6HHPFy": {
+    "context": "tax strategy combobox hint",
+    "string": "ٹیکس کی حساب کتاب کے طریقے کا انتخاب کریں"
+  },
+  "6JlXeD": {
+    "context": "button",
+    "string": "صفحات کی قسم تخلیق کریں"
+  },
+  "6QjMei": {
+    "string": "پری آرڈر کا اختتامی وقت مستقبل میں سیٹ کیا جانا چاہئے"
+  },
+  "6RQKxH": {
+    "context": "order history message",
+    "string": "بل نمبر {invoiceNumber} کو اپ ڈیٹ کیا گیا"
+  },
+  "6RtE2D": {
+    "context": "unassign collection from sale and save, button",
+    "string": "ہٹائیں اور محفوظ کریں"
+  },
+  "6S/1Sf": {
+    "context": "row in the table",
+    "string": "حتمی تاریخ"
+  },
+  "6a8B0x": {
+    "context": "translations section name",
+    "string": "ترجمے"
+  },
+  "6e1nSB": {
+    "context": "header",
+    "string": "شیڈولنگ کی ترتیبات"
+  },
+  "6f1SRM": {
+    "context": "authorization error",
+    "string": "اختیارات کی ناکامی"
+  },
+  "6iMZl0": {
+    "context": "shop from invoice tab title",
+    "string": "آرڈر سے خریداری"
+  },
+  "6nDFex": {
+    "context": "error message",
+    "string": "آرڈر میں کوئی پروڈکٹ نہیں ہے"
+  },
+  "6nwLTN": {
+    "context": "on sale status",
+    "string": "فروخت میں"
+  },
+  "6pF1es": {
+    "context": "order field name",
+    "string": "بزنس ڈیٹا"
+  },
+  "6s/t8G": {
+    "context": "draft created from replace event message",
+    "string": "ڈرافٹ کو آرڈر سے دوبارہ جاری کیا گیا"
+  },
+  "6tN/vA": {
+    "context": "default sales channel",
+    "string": "ڈیفالٹ سیلز چینل"
+  },
+  "6vKzHs": {
+    "context": "product attributes section name",
+    "string": "پروڈکٹ کی خصوصیات"
+  },
+  "6vRiKP": {
+    "context": "order payments tab header",
+    "string": "ادائیگیاں"
+  },
+  "6weRVh": {
+    "context": "cancel action text",
+    "string": "منسوخ کریں"
+  },
+  "6yR3ei": {
+    "context": "button",
+    "string": "خریداری کریں"
+  },
+  "6zMz7C": {
+    "context": "button",
+    "string": "آرڈر کریں"
+  },
+  "VTITVe": { "context": "section header", "string": "آاسٹاف ممبر کی معلومات" },
+  "N3Zot1": { "context": "button", "string": "اپنا پاس ورڈ تبدیل کریں" }
+}

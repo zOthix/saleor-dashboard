@@ -20,7 +20,6 @@ import {
   useUpdatePrivateMetadataMutation,
 } from "@dashboard/graphql";
 import useBulkActions from "@dashboard/hooks/useBulkActions";
-import { useListSelectedItems } from "@dashboard/hooks/useListSelectedItems";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import useNotifier from "@dashboard/hooks/useNotifier";
 import { commonMessages } from "@dashboard/intl";
@@ -48,7 +47,6 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
   const notify = useNotifier();
   const productAttributeListActions = useBulkActions();
   const variantAttributeListActions = useBulkActions();
-  const assignAttributesActions = useListSelectedItems<string>();
   const intl = useIntl();
   const { loadMore, search, result } = useAvailableProductAttributeSearch({
     variables: {
@@ -214,31 +212,23 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
         },
       },
     });
-  const handleAssignAttribute = async () => {
-    await assignAttribute.mutate({
+  const handleAssignAttribute = () =>
+    assignAttribute.mutate({
       id,
-      operations: assignAttributesActions.selectedItems.map(id => ({
+      operations: params.ids.map(id => ({
         id,
         type: ProductAttributeType[params.type],
       })),
     });
-
-    assignAttributesActions.clearSelectedItems();
-  };
   const handleAttributeUnassign = () =>
     unassignAttribute.mutate({
       id,
       ids: [params.id],
     });
-  const handleBulkProductAttributeUnassign = () =>
+  const handleBulkAttributeUnassign = () =>
     unassignAttribute.mutate({
       id,
-      ids: productAttributeListActions.listElements,
-    });
-  const handleBulkVariantAttributeUnassign = () =>
-    unassignAttribute.mutate({
-      id,
-      ids: variantAttributeListActions.listElements,
+      ids: params.ids,
     });
   const loading =
     updateProductTypeOpts.loading || updateProductAttributesOpts.loading || dataLoading;
@@ -311,7 +301,8 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
               onClick={() =>
                 navigate(
                   productTypeUrl(id, {
-                    action: "unassign-product-attributes",
+                    action: "unassign-attributes",
+                    ids: productAttributeListActions.listElements,
                   }),
                 )
               }
@@ -334,7 +325,8 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
               onClick={() =>
                 navigate(
                   productTypeUrl(id, {
-                    action: "unassign-variant-attributes",
+                    action: "unassign-attributes",
+                    ids: variantAttributeListActions.listElements,
                   }),
                 )
               }
@@ -361,10 +353,7 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
                 [],
               )}
               loading={result.loading}
-              onClose={() => {
-                closeModal();
-                assignAttributesActions.clearSelectedItems();
-              }}
+              onClose={closeModal}
               onSubmit={handleAssignAttribute}
               onFetch={search}
               onFetchMore={loadMore}
@@ -376,8 +365,19 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
               open={
                 params.action === "assign-attribute" && params.type === ProductAttributeType[key]
               }
-              selected={assignAttributesActions.selectedItems}
-              onToggle={assignAttributesActions.toggleSelectItem}
+              selected={maybe(() => params.ids, [])}
+              onToggle={attributeId => {
+                const ids = maybe(() => params.ids, []);
+
+                navigate(
+                  productTypeUrl(id, {
+                    ...params,
+                    ids: ids.includes(attributeId)
+                      ? params.ids.filter(selectedId => selectedId !== attributeId)
+                      : [...ids, attributeId],
+                  }),
+                );
+              }}
               key={key}
             />
           ))}
@@ -400,21 +400,11 @@ export const ProductTypeUpdate: React.FC<ProductTypeUpdateProps> = ({ id, params
           defaultMessage: "Unassign Attribute from Product Type",
           description: "dialog header",
         })}
-        attributeQuantity={
-          params.action === "unassign-product-attributes"
-            ? productAttributeListActions.listElements.length
-            : variantAttributeListActions.listElements.length
-        }
+        attributeQuantity={maybe(() => params.ids.length)}
         confirmButtonState={unassignAttribute.opts.status}
         onClose={closeModal}
-        onConfirm={
-          params.action === "unassign-product-attributes"
-            ? handleBulkProductAttributeUnassign
-            : handleBulkVariantAttributeUnassign
-        }
-        open={["unassign-product-attributes", "unassign-variant-attributes"].includes(
-          params.action,
-        )}
+        onConfirm={handleBulkAttributeUnassign}
+        open={params.action === "unassign-attributes"}
         itemTypeName={getStringOrPlaceholder(data?.productType.name)}
       />
       <AttributeUnassignDialog

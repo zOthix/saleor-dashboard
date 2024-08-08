@@ -3,7 +3,6 @@ import "./index.css";
 
 import { ApolloProvider } from "@apollo/client";
 import DemoBanner from "@dashboard/components/DemoBanner";
-import { history, Route, Router } from "@dashboard/components/Router";
 import { PermissionEnum } from "@dashboard/graphql";
 import useAppState from "@dashboard/hooks/useAppState";
 import { ThemeProvider } from "@dashboard/theme";
@@ -14,7 +13,7 @@ import { render } from "react-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import TagManager from "react-gtm-module";
 import { useIntl } from "react-intl";
-import { Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { AppsSectionRoot } from "./apps";
 import { ExternalAppProvider } from "./apps/components/ExternalAppContext";
@@ -43,7 +42,7 @@ import { ProductAnalytics } from "./components/ProductAnalytics";
 import { SavebarRefProvider } from "./components/Savebar/SavebarRefContext";
 import { ShopProvider } from "./components/Shop";
 import { WindowTitle } from "./components/WindowTitle";
-import { DEMO_MODE, GTM_ID } from "./config";
+import { DEMO_MODE, getAppMountUri, GTM_ID } from "./config";
 import ConfigurationSection from "./configuration";
 import { getConfigMenuItemsPermissions } from "./configuration/utils";
 import AppStateProvider from "./containers/AppState";
@@ -83,7 +82,7 @@ if (GTM_ID) {
   TagManager.initialize({ gtmId: GTM_ID });
 }
 
-errorTracker.init(history);
+errorTracker.init();
 
 /*
   Handle legacy theming toggle. Since we use new and old macaw,
@@ -106,7 +105,7 @@ handleLegacyTheming();
 const App: React.FC = () => (
   <SaleorProvider client={saleorClient}>
     <ApolloProvider client={apolloClient}>
-      <Router>
+      <BrowserRouter basename={getAppMountUri()}>
         <LegacyThemeProvider overrides={themeOverrides} palettes={paletteOverrides}>
           <ThemeProvider>
             <DateProvider>
@@ -138,7 +137,7 @@ const App: React.FC = () => (
             </DateProvider>
           </ThemeProvider>
         </LegacyThemeProvider>
-      </Router>
+      </BrowserRouter>
     </ApolloProvider>
   </SaleorProvider>
 );

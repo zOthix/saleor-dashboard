@@ -112,12 +112,11 @@ const StaffDetailsPage: React.FC<StaffDetailsPageProps> = ({
                 onChange={change}
                 onImageUpload={onImageUpload}
                 onImageDelete={onImageDelete}
-                locale={locale}
               />
               {canEditPreferences && (
                 <>
                   <CardSpacer />
-                  <StaffPassword onChangePassword={onChangePassword} locale={locale} />
+                  <StaffPassword onChangePassword={onChangePassword} />
                 </>
               )}
             </DetailPageLayout.Content>

@@ -72,17 +72,13 @@ export const Attributes: React.FC<AttributesProps> = ({
   ...props
 }) => {
   const intl = useIntl();
-  const locale = localStorage.getItem("locale");
 
   return (
     <DashboardCard paddingTop={6}>
       <DashboardCard.Content>
         <Box display="flex" flexDirection="column" gap={1}>
-          <Accordion
-            defaultValue="attributes-accordion"
-            style={{ direction: locale === "ar" ? "rtl" : "ltr" }}
-          >
-            <Accordion.Item value="attributes-accordion" style={{ direction: "ltr" }}>
+          <Accordion defaultValue="attributes-accordion">
+            <Accordion.Item value="attributes-accordion">
               <Accordion.Trigger
                 data-testid="attributes-expand"
                 flexWrap="wrap"

@@ -30784,9 +30784,6 @@ input StaffUpdateInput {
   """Family name."""
   lastName: String
 
-  """Language code."""
-  languageCode: LanguageCodeEnum
-
   """
   Fields required to update the user metadata.
   

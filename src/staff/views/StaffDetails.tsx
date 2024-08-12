@@ -5,7 +5,7 @@ import NotFoundPage from "@dashboard/components/NotFoundPage";
 import { hasPermissions } from "@dashboard/components/RequirePermissions";
 import { WindowTitle } from "@dashboard/components/WindowTitle";
 import { DEFAULT_INITIAL_SEARCH_DATA } from "@dashboard/config";
-import { LanguageCodeEnum, PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
+import { PermissionEnum, useStaffMemberDetailsQuery } from "@dashboard/graphql";
 import useNavigator from "@dashboard/hooks/useNavigator";
 import { extractMutationErrors, getStringOrPlaceholder } from "@dashboard/misc";
 import usePermissionGroupSearch from "@dashboard/searches/usePermissionGroupSearch";
@@ -98,17 +98,6 @@ export const StaffDetails: React.FC<OrderListProps> = ({ id, params }) => {
       }),
     );
 
-  const handleLanguageCodeChange = (languageCode: LanguageCodeEnum) =>
-    extractMutationErrors(
-      updateUserAccount({
-        variables: {
-          input: {
-            languageCode: languageCode,
-          },
-        },
-      }),
-    );
-
   return (
     <>
       <WindowTitle title={getStringOrPlaceholder(staffMember?.email)} />
@@ -160,7 +149,6 @@ export const StaffDetails: React.FC<OrderListProps> = ({ id, params }) => {
           onFetchMore: loadMorePermissionGroups,
         }}
         onSearchChange={searchPermissionGroups}
-        handleLanguageCodeChange={handleLanguageCodeChange}
       />
       <ActionDialog
         open={params.action === "remove"}

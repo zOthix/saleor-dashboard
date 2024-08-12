@@ -8,7 +8,6 @@ import Form from "@dashboard/components/Form";
 import { DetailPageLayout } from "@dashboard/components/Layouts";
 import { Savebar } from "@dashboard/components/Savebar";
 import {
-  LanguageCodeEnum,
   SearchPermissionGroupsQuery,
   StaffErrorFragment,
   StaffMemberDetailsFragment,
@@ -39,10 +38,6 @@ export interface StaffDetailsFormData {
   permissionGroups: Option[];
 }
 
-export interface StaffLanguageCodeUpdateData {
-  languageCode: string;
-}
-
 export interface StaffDetailsPageProps extends SearchPageProps {
   availablePermissionGroups: RelayToFlat<SearchPermissionGroupsQuery["search"]>;
   canEditAvatar: boolean;
@@ -59,7 +54,6 @@ export interface StaffDetailsPageProps extends SearchPageProps {
   onImageDelete: () => void;
   onSubmit: (data: StaffDetailsFormData) => SubmitPromise;
   onImageUpload: (file: File) => any;
-  handleLanguageCodeChange: (languageCode: LanguageCodeEnum) => void;
 }
 
 const StaffDetailsPage: React.FC<StaffDetailsPageProps> = ({
@@ -80,7 +74,6 @@ const StaffDetailsPage: React.FC<StaffDetailsPageProps> = ({
   onSubmit,
   saveButtonBarState,
   staffMember,
-  handleLanguageCodeChange,
 }: StaffDetailsPageProps) => {
   const intl = useIntl();
   const navigate = useNavigator();
@@ -124,11 +117,7 @@ const StaffDetailsPage: React.FC<StaffDetailsPageProps> = ({
 
             <DetailPageLayout.RightSidebar>
               {canEditPreferences && (
-                <StaffPreferences
-                  locale={locale}
-                  onLocaleChange={setLocale}
-                  handleLanguageCodeChange={handleLanguageCodeChange}
-                />
+                <StaffPreferences locale={locale} onLocaleChange={setLocale} />
               )}
               {canEditStatus && (
                 <>

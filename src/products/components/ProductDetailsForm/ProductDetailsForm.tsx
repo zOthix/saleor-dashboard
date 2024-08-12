@@ -32,7 +32,6 @@ export const ProductDetailsForm: React.FC<ProductDetailsFormProps> = ({
   const intl = useIntl();
   const formErrors = getFormErrors(["name", "description", "rating"], errors);
   const { editorRef, defaultValue, isReadyForMount, handleChange } = useRichTextContext();
-  const locale = localStorage.getItem("locale");
 
   return (
     <DashboardCard>
@@ -43,15 +42,11 @@ export const ProductDetailsForm: React.FC<ProductDetailsFormProps> = ({
       </DashboardCard.Header>
       <DashboardCard.Content display="grid" gap={2}>
         <Input
-          label={
-            <div style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
-              {intl.formatMessage({
-                id: "6AMFki",
-                defaultMessage: "Name",
-                description: "product name",
-              })}
-            </div>
-          }
+          label={intl.formatMessage({
+            id: "6AMFki",
+            defaultMessage: "Name",
+            description: "product name",
+          })}
           size="small"
           value={data.name || ""}
           onChange={onChange}
@@ -59,7 +54,6 @@ export const ProductDetailsForm: React.FC<ProductDetailsFormProps> = ({
           name="name"
           disabled={disabled}
           helperText={getProductErrorMessage(formErrors.name, intl)}
-          style={{ direction: locale === "ar" ? "rtl" : "ltr" }}
         />
 
         {isReadyForMount ? (

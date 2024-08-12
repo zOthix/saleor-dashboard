@@ -57,7 +57,6 @@ interface PageHeaderProps {
 const PageHeader: React.FC<PageHeaderProps> = props => {
   const { children, className, inline, underline, limitText, title, cardMenu, preview } = props;
   const classes = useStyles(props);
-  const locale = localStorage.getItem("locale");
 
   return (
     <>
@@ -68,12 +67,12 @@ const PageHeader: React.FC<PageHeaderProps> = props => {
         inline={inline}
         underline={underline}
         title={
-          <div style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+          <>
             <Text className={classes.title} size={6} fontWeight="bold" lineHeight={3}>
               {title !== undefined ? title : <Skeleton style={{ width: "10em" }} />}
             </Text>
             {cardMenu}
-          </div>
+          </>
         }
       >
         <div className={classes.root}>

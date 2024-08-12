@@ -21,7 +21,6 @@ export const HomeActivityCard = ({ activities, testId }: HomeActivityCardProps) 
     defaultMessage: "Activity",
     description: "header",
   });
-  const locale = localStorage.getItem("locale");
 
   if (activities.hasError) {
     return (
@@ -57,7 +56,7 @@ export const HomeActivityCard = ({ activities, testId }: HomeActivityCardProps) 
 
   return (
     <DashboardCard data-test-id={testId}>
-      <DashboardCard.Header style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+      <DashboardCard.Header>
         <DashboardCard.Title>{title}</DashboardCard.Title>
       </DashboardCard.Header>
       <DashboardCard.Content>
@@ -78,25 +77,8 @@ export const HomeActivityCard = ({ activities, testId }: HomeActivityCardProps) 
               >
                 {activity ? (
                   <>
-                    <Text
-                      style={{
-                        direction: locale === "ar" ? "rtl" : "ltr",
-                        textAlign: locale === "ar" ? "right" : "left",
-                        width: "100%",
-                      }}
-                      size={3}
-                    >
-                      {getActivityMessage(activity, intl)}
-                    </Text>
-                    <Text
-                      size={3}
-                      color="default2"
-                      style={{
-                        direction: locale === "ar" ? "rtl" : "ltr",
-                        textAlign: locale === "ar" ? "right" : "left",
-                        width: "100%",
-                      }}
-                    >
+                    <Text size={3}>{getActivityMessage(activity, intl)}</Text>
+                    <Text size={3} color="default2">
                       <DateTime date={activity.date} plain />
                     </Text>
                   </>

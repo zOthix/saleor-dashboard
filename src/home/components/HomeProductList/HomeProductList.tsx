@@ -21,7 +21,6 @@ export const HomeProductList = ({ topProducts, testId }: HomeProductListProps) =
     defaultMessage: "Top products",
     description: "header",
   });
-  const locale = localStorage.getItem("locale");
 
   if (topProducts.hasError) {
     return (
@@ -112,7 +111,7 @@ export const HomeProductList = ({ topProducts, testId }: HomeProductListProps) =
           ),
           () => (
             <Box borderColor="default1" borderWidth={1} paddingY={5} borderBottomStyle="solid">
-              <Text size={3} style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+              <Text size={3}>
                 <FormattedMessage id="Q1Uzbb" defaultMessage="No products found" />
               </Text>
             </Box>

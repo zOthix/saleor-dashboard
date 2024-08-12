@@ -27,7 +27,7 @@ ARG STATIC_URL
 ARG SKIP_SOURCEMAPS
 ARG LOCALE_CODE
 
-ENV API_URL ${API_URL:-http://64.176.164.234:4082/graphql/}
+ENV API_URL ${API_URL:-http://localhost:8000/graphql/}
 ENV APP_MOUNT_URI ${APP_MOUNT_URI:-/dashboard/}
 ENV APPS_MARKETPLACE_API_URL ${APPS_MARKETPLACE_API_URL:-https://apps.saleor.io/api/v2/saleor-apps}
 ENV APPS_TUNNEL_URL_KEYWORDS ${APPS_TUNNEL_URL_KEYWORDS}
@@ -40,14 +40,15 @@ FROM nginx:stable-alpine as runner
 WORKDIR /app
 
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY ./nginx/replace-api-url.sh /docker-entrypoint.d/50-replace-api-url.sh
+COPY ./nginx/replace-env-vars.sh /docker-entrypoint.d/50-replace-env-vars.sh
 COPY --from=builder /app/build/ /app/
 
-LABEL org.opencontainers.image.title="saleor/saleor-dashboard"                                  \
-      org.opencontainers.image.description="A GraphQL-powered, single-page dashboard application for Saleor." \
-      org.opencontainers.image.url="https://saleor.io/"                                \
-      org.opencontainers.image.source="https://github.com/saleor/saleor-dashboard"     \
-      org.opencontainers.image.revision="$COMMIT_ID"                                   \
-      org.opencontainers.image.version="$PROJECT_VERSION"                              \
-      org.opencontainers.image.authors="Saleor Commerce (https://saleor.io)"           \
-      org.opencontainers.image.licenses="BSD 3"
+LABEL \
+  org.opencontainers.image.title="saleor/saleor-dashboard" \
+  org.opencontainers.image.description="A GraphQL-powered, single-page dashboard application for Saleor." \
+  org.opencontainers.image.url="https://saleor.io/" \
+  org.opencontainers.image.source="https://github.com/saleor/saleor-dashboard" \
+  org.opencontainers.image.revision="$COMMIT_ID" \
+  org.opencontainers.image.version="$PROJECT_VERSION" \
+  org.opencontainers.image.authors="Saleor Commerce (https://saleor.io)" \
+  org.opencontainers.image.licenses="BSD 3"

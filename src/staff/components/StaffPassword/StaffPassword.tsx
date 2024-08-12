@@ -1,21 +1,19 @@
 import { Button } from "@dashboard/components/Button";
 import { DashboardCard } from "@dashboard/components/Card";
-import { Locale } from "@dashboard/components/Locale";
 import { Text } from "@saleor/macaw-ui-next";
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 interface StaffPasswordProps {
   onChangePassword: () => void;
-  locale: Locale;
 }
 
-const StaffPassword: React.FC<StaffPasswordProps> = ({ onChangePassword, locale }) => {
+const StaffPassword: React.FC<StaffPasswordProps> = ({ onChangePassword }) => {
   const intl = useIntl();
 
   return (
     <DashboardCard>
-      <DashboardCard.Header style={{ direction: locale === "ar" ? "rtl" : "ltr" }}>
+      <DashboardCard.Header>
         <DashboardCard.Title>
           {intl.formatMessage({
             id: "ZhDQel",

@@ -2,18 +2,25 @@ import { DashboardCard } from "@dashboard/components/Card";
 import { Combobox } from "@dashboard/components/Combobox";
 import FormSpacer from "@dashboard/components/FormSpacer";
 import { Locale, localeNames } from "@dashboard/components/Locale";
+import { LanguageCodeEnum } from "@dashboard/graphql";
 import { capitalize } from "@dashboard/misc";
 import { Text } from "@saleor/macaw-ui-next";
-import React from "react";
+import React, { useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
 interface StaffPreferencesProps {
   locale: Locale;
   onLocaleChange: (locale: Locale) => void;
+  handleLanguageCodeChange: (languageCode: LanguageCodeEnum) => void;
 }
 
-const StaffPreferences: React.FC<StaffPreferencesProps> = ({ locale, onLocaleChange }) => {
+const StaffPreferences: React.FC<StaffPreferencesProps> = ({
+  locale,
+  onLocaleChange,
+  handleLanguageCodeChange,
+}) => {
   const intl = useIntl();
+  const [languageCode, setLanguageCode] = useState("EN");
   const handleLocaleChange = async (locale: Locale) => {
     if (!locale) {
       return;
@@ -70,6 +77,31 @@ const StaffPreferences: React.FC<StaffPreferencesProps> = ({ locale, onLocaleCha
             defaultMessage="Please note, while all currency and date adjustments are complete, language translations are at varying degrees of completion."
           />
         </Text>
+      </DashboardCard.Content>
+      <DashboardCard.Content>
+        <Combobox
+          // helperText={intl.formatMessage({
+          //   id: "JJgJwi",
+          //   defaultMessage: "Selecting this will change the language of your dashboard",
+          // })}
+          helperText={"Selecting this will change the language of your store front"}
+          label={intl.formatMessage({
+            id: "mr9jbO",
+            defaultMessage: "Preferred Language",
+          })}
+          options={Object.values(LanguageCodeEnum).map(code => ({
+            // label: capitalize(localeNames[locale]),
+            label: code,
+            value: code,
+          }))}
+          fetchOptions={() => undefined}
+          name="languageCode"
+          value={{
+            label: languageCode,
+            value: languageCode,
+          }}
+          onChange={event => handleLanguageCodeChange(event.target.value)}
+        />
       </DashboardCard.Content>
     </DashboardCard>
   );
